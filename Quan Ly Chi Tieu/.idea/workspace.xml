@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80eb69c4-714d-423f-8bb6-52227d1d40a1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_27_2_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +38,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Java-nang-cao\11THC\_projects_\NguyenThanhTu\Quan Ly Chi Tieu\lib" />
+    </key>
+  </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
       <list>
@@ -69,7 +73,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577268829100</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="+ Add project">
+      <created>1577269033761</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1577269033761</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -77,13 +88,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="+ Add project" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="421" y="47" key="CommitChangelistDialog2" timestamp="1577268828529">
+    <state x="421" y="47" key="CommitChangelistDialog2" timestamp="1577269033160">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="421" y="47" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1577268828529" />
-    <state x="452" y="191" key="Vcs.Push.Dialog.v2" timestamp="1577268862349">
+    <state x="421" y="47" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1577269033160" />
+    <state x="452" y="191" key="Vcs.Push.Dialog.v2" timestamp="1577269036902">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="452" y="191" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1577268862349" />
+    <state x="452" y="191" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1577269036902" />
   </component>
 </project>
