@@ -1,16 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80eb69c4-714d-423f-8bb6-52227d1d40a1" name="Default Changelist" comment="" />
+    <list default="true" id="80eb69c4-714d-423f-8bb6-52227d1d40a1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_27_2_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\Java-nang-cao\11THC\_projects_\NguyenThanhTu\Quan Ly Chi Tieu\.idea" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1VTETmVLd9w1PYP9YEHz8sHaAZ7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -18,6 +36,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
   </component>
   <component name="ServiceViewManager">
@@ -43,6 +62,28 @@
       <option name="presentableId" value="Default" />
       <updated>1577268694808</updated>
     </task>
+    <task id="LOCAL-00001" summary="+ Add project">
+      <created>1577268829100</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1577268829100</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="+ Add project" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ Add project" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="421" y="47" key="CommitChangelistDialog2" timestamp="1577268828529">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="421" y="47" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1577268828529" />
+    <state x="452" y="191" key="Vcs.Push.Dialog.v2" timestamp="1577268862349">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="452" y="191" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1577268862349" />
   </component>
 </project>
