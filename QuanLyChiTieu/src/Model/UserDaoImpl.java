@@ -14,7 +14,7 @@ public class UserDaoImpl implements UserDao {
         String SQL_CREATE_USERS_TABLE = "CREATE TABLE IF NOT EXISTS UsersTable (\n"
                 + "    ID integer PRIMARY KEY,\n"
                 + "    FullName text NOT NULL,\n"
-                + "    Password text NOT NULL \n"
+                + "    Password text NOT NULL\n"
                 + ");";
         try {
             Statement statement = db.getConnection().createStatement();
@@ -31,7 +31,7 @@ public class UserDaoImpl implements UserDao {
                 "VALUES(?,?)";
         try {
             PreparedStatement ps = db.getConnection().prepareStatement(SQL_CREATE_USER, Statement.RETURN_GENERATED_KEYS);
-            ps.setString(1, user.getFullname());
+            ps.setString(1, user.getFullName());
             ps.setString(2, user.getPassword());
             ps.executeUpdate();
 
@@ -92,6 +92,7 @@ public class UserDaoImpl implements UserDao {
                 String fullName = rs.getString(2);
                 String passWord = rs.getString(3);
 
+
                 User user = new User(id, fullName, passWord);
 
                 users.add(user);
@@ -107,11 +108,11 @@ public class UserDaoImpl implements UserDao {
     @Override
     public void updateUser(User user, int id) {
         Database db = new Database();
-        final String SQL_UPDATE_USER_BY_ID = "UPDATE MembersTable SET FullName = ?, Gender = ? WHERE ID = ?";
+        final String SQL_UPDATE_USER_BY_ID = "UPDATE MembersTable SET FullName = ?, Password = ? WHERE ID = ?";
         PreparedStatement ps;
         try {
             ps = db.getConnection().prepareStatement(SQL_UPDATE_USER_BY_ID);
-            ps.setString(1, user.getFullname());
+            ps.setString(1, user.getFullName());
             ps.setString(2, user.getPassword());
             ps.setInt(3, id);
             ps.executeUpdate();
