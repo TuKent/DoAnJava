@@ -15,4 +15,7 @@ public interface UsersModel {
     void registerObserver(TableObserver observer);
 
     void unregisterObserver(TableObserver observer);
+
+    boolean checkUserandPassword(User user);
+
 }

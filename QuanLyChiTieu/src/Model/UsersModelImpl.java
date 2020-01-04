@@ -46,6 +46,21 @@ public class UsersModelImpl implements UsersModel {
         tableObservers.remove(observer);
     }
 
+    @Override
+    public boolean checkUserandPassword(User user) {
+        UserDao userDao = new UserDaoImpl();
+        User user1 = userDao.getByUserandPassword(user);
+        if (user1 != null)
+        {
+            return  true;
+        }
+        else {
+            return  false;
+        }
+
+
+    }
+
     private void notifyObservers() {
         List<User> users = getAllUsers();
         for (TableObserver observer: tableObservers) {

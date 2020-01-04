@@ -27,7 +27,7 @@ public class UserDaoImpl implements UserDao {
     @Override
     public void insertUser(User user) {
         Database db = new Database();
-        final String SQL_CREATE_USER = "INSERT INTO MembersTable(FullName, Password)" +
+        final String SQL_CREATE_USER = "INSERT INTO UsersTable(FullName, Password)" +
                 "VALUES(?,?)";
         try {
             PreparedStatement ps = db.getConnection().prepareStatement(SQL_CREATE_USER, Statement.RETURN_GENERATED_KEYS);
@@ -53,7 +53,7 @@ public class UserDaoImpl implements UserDao {
 
         Database db = new Database();
 
-        final String SQL_SELECT_USER_BY_ID = "SELECT * FROM MembersTable WHERE id=?";
+        final String SQL_SELECT_USER_BY_ID = "SELECT * FROM UsersTable WHERE id=?";
         try {
             PreparedStatement ps = db.getConnection().prepareStatement(SQL_SELECT_USER_BY_ID);
             ps.setInt(1, id);
@@ -81,7 +81,7 @@ public class UserDaoImpl implements UserDao {
 
         Database db = new Database();
 
-        final String SQL_SELECT_ALL_USERS = "SELECT * FROM MembersTable";
+        final String SQL_SELECT_ALL_USERS = "SELECT * FROM UsersTable";
         try {
             Statement statement = db.getConnection().createStatement();
 
@@ -108,7 +108,7 @@ public class UserDaoImpl implements UserDao {
     @Override
     public void updateUser(User user, int id) {
         Database db = new Database();
-        final String SQL_UPDATE_USER_BY_ID = "UPDATE MembersTable SET FullName = ?, Password = ? WHERE ID = ?";
+        final String SQL_UPDATE_USER_BY_ID = "UPDATE UsersTable SET FullName = ?, Password = ? WHERE ID = ?";
         PreparedStatement ps;
         try {
             ps = db.getConnection().prepareStatement(SQL_UPDATE_USER_BY_ID);
@@ -125,7 +125,7 @@ public class UserDaoImpl implements UserDao {
     @Override
     public void deleteUser(int id) {
         Database db = new Database();
-        final String SQL_DELETE_USER_BY_ID = "DELETE FROM MembersTable WHERE ID = ?";
+        final String SQL_DELETE_USER_BY_ID = "DELETE FROM UsersTable WHERE ID = ?";
         PreparedStatement ps = null;
         try {
             ps = db.getConnection().prepareStatement(SQL_DELETE_USER_BY_ID);
@@ -135,5 +135,35 @@ public class UserDaoImpl implements UserDao {
             e.printStackTrace();
         }
         db.close();
+    }
+
+    @Override
+    public User getByUserandPassword(User users) {
+        Database db = new Database();
+        final String SQL_GET_USERNAME_AND_PASSWORD = "SELECT * FROM UsersTable WHERE FullName = ? and Password = ? ";
+        PreparedStatement ps = null;
+        ResultSet rs;
+        try
+        {
+            ps = db.getConnection().prepareStatement(SQL_GET_USERNAME_AND_PASSWORD);
+            ps.setString(1,users.getFullName());
+            ps.setString(2,users.getPassword());
+            rs = ps.executeQuery();
+            if (rs.next())
+            {
+                User user = new User();
+                String FullName = rs.getString(2);
+                String Password = rs.getString(3);
+                user.setFullName(FullName);
+                user.setPassword(Password);
+                user.setID(rs.getInt(1));
+                return user;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        db.close();
+
+        return null;
     }
 }

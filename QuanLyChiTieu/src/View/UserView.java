@@ -5,6 +5,7 @@ import Controller.NewUsersController;
 import Model.TableObserver;
 import Model.User;
 import Model.UsersModel;
+import Model.UsersModelImpl;
 
 import javax.swing.*;
 import java.awt.*;
@@ -42,20 +43,30 @@ public class UserView {
         this.usersModel = usersModel;
     }
 
+    //REGISTER FORM
     public String getTxtUsernameSU() {
         return txtUsernameSU.getText();
     }
 
     public String getTxtPassWordSU() {
-        System.out.println(txtPassWordSU.getText());
-        return (txtPassWordSU.getPassword().toString());
+        return new String(txtPassWordSU.getPassword());
     }
 
     public String getTxtCPasswordSU() {
-        System.out.println(txtCPasswordSU.toString());
-        return (txtCPasswordSU.getPassword().toString());
+        return new String(txtCPasswordSU.getPassword());
     }
 
+
+    //LOGIN FORM
+
+
+    public String getTxtUsernameSI() {
+        return txtUsernameSI.getText();
+    }
+
+    public String getTxtPasswordSI() {
+        return new String(txtPasswordSI.getPassword());
+    }
 
     public UserView() {
         cardLayout = (CardLayout) CardPanel.getLayout();
@@ -78,11 +89,25 @@ public class UserView {
                 onRegister(e);
             }
         });
+        btnLogin.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                onLogin(e);
+            }
+        });
     }
 
     private void onRegister(ActionEvent e) {
+        usersModel = new UsersModelImpl();
         NewUsersController controller = new NewMembersControllerImpl(rootPanel,usersModel, this);
         controller.newMember();
+    }
+
+    private void onLogin(ActionEvent e)
+    {
+        usersModel = new UsersModelImpl();
+        NewUsersController controller = new NewMembersControllerImpl(rootPanel,usersModel,this);
+        controller.oldMember();
     }
 
     public JPanel getRootPanel() {

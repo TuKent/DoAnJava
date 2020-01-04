@@ -13,7 +13,6 @@ public class  User {
 
     public User() {
     }
-
     public int getID() {
         return ID;
     }

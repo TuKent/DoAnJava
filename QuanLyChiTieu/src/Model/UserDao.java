@@ -12,8 +12,11 @@ public interface UserDao {
     List<User> getAllUsers();
 
     // Update
-    void updateUser(User membership, int id);
+    void updateUser(User user, int id);
 
     // Delete
     void deleteUser(int id);
+
+    // Get Username and Password
+    User getByUserandPassword(User user);
 }
