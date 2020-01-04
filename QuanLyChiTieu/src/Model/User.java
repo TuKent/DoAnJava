@@ -5,6 +5,34 @@ public class  User {
     private String FullName;
     private String Password;
 
+    private int Income;
+    private int Expensive;
+    private int Total;
+
+    public int getIncome() {
+        return Income;
+    }
+
+    public void setIncome(int income) {
+        Income = income;
+    }
+
+    public int getExpensive() {
+        return Expensive;
+    }
+
+    public void setExpensive(int expensive) {
+        Expensive = expensive;
+    }
+
+    public int getTotal() {
+        return Total;
+    }
+
+    public void setTotal(int total) {
+        Total = total;
+    }
+
     public User(int ID, String fullname, String password) {
         this.ID = ID;
         this.FullName = fullname;

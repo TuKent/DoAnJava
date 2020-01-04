@@ -24,6 +24,16 @@ public class UserView {
     private JPanel NavPanel;
     private JButton btnSignIn;
     private JButton btnSignUp;
+
+    public CardLayout getCardLayout() {
+        return cardLayout;
+    }
+
+
+    public JPanel getCardPanel() {
+        return CardPanel;
+    }
+
     private JPanel CardPanel;
     private JPanel RegisterPanel;
     private JTextField txtUsernameSU;
@@ -34,6 +44,22 @@ public class UserView {
     private JButton btnLogin;
     private JTextField txtUsernameSI;
     private JPasswordField txtPasswordSI;
+    private JTextField textTotal;
+    private JComboBox comboBox1;
+    private JTable PayTable;
+    private JButton btnAddPay;
+    private JButton btnEditPay;
+    private JButton btnDeletePay;
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+
+    private int ID;
 
     CardLayout cardLayout;
 

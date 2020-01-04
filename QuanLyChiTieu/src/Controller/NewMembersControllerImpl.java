@@ -71,13 +71,14 @@ public class NewMembersControllerImpl implements NewUsersController {
             user.setFullName(mFullName);
             user.setPassword(mPassword);
           boolean booleans = model.checkUserandPassword(user);
-           if ( booleans == false)
+           if (!booleans)
            {
                JOptionPane.showMessageDialog(parent,"Username hoặc Password sai!","Something wrong here!",JOptionPane.OK_OPTION);
            }
            else
            {
-               JOptionPane.showMessageDialog(parent,"Đăng nhập thành công","Success",JOptionPane.OK_OPTION);
+               view.getCardLayout().show(view.getCardPanel(),"TransactionTable");
+
            }
         }
     }
